@@ -9,6 +9,7 @@ Install Graphviz.
 
 
 Go to your sources root directory and do:
+
 1. prepare source files list
   - under Windows: ```dir /B /S *.c > cscope.files``` (/B = bare format, no extra info);
   - under Linux: ```find . -name '*.c' > cscope.files```;
