@@ -1,6 +1,6 @@
 tceetree could be useful for you when:
-* you have the sources of an application written in C language;
-* you would like to have a graphical representation of the entire or partial function call tree.
+- you have the sources of an application written in C language;
+- you would like to have a graphical representation of the entire or partial function call tree.
 
 
 If this is what you are looking for, follow these steps:
@@ -10,18 +10,18 @@ Install Graphviz.
 
 Go to your sources root directory and do:
 1. prepare source files list
-	* under Windows: dir /B /S *.c > cscope.files (/B = bare format, no extra info);
-	* under Linux: find . -name '*.c' > cscope.files;
-	* that will recurse subdirectories and list all C files in cscope.files.
-2. execute cscope -b -c -R (build the cross reference only, don't compress it, recurse);
-3. run tceetree with cscope.out as input (default) to get tceetree.out (DOT language representation of function call tree);
-4. execute dot -Tpng -O tceetree.out to get a graphical representation of the tree in tceetree.out.png.
+  - under Windows: ```dir /B /S *.c > cscope.files``` (/B = bare format, no extra info);
+  - under Linux: ```find . -name '*.c' > cscope.files```;
+  - that will recurse subdirectories and list all C files in cscope.files.
+2. execute ```cscope -b -c -R``` (build the cross reference only, don't compress it, recurse);
+3. run ```tceetree``` with cscope.out as input (default) to get tceetree.out (DOT language representation of function call tree);
+4. execute ```dot -Tpng -O tceetree.out``` to get a graphical representation of the tree in tceetree.out.png.
 5. There are a lot of options you can specify when invoking dot to customize the graph, for example:
-	* you can change output format e.g. to pdf: dot -Tpdf -O tceetree.out;
-	* you may modify layout from left to right instead of top to bottom: dot -Grankdir=LR -Tpng -O tceetree.out;
-	* you may modify graph, nodes and edges font: dot -Gfontname=Helvetica -Nfontname=Helvetica -Efontname=Helvetica -Tpng -O tceetree.out;
-	* see dot.1.pdf and dotguide.pdf within Graphviz documentation for many other options.
-	* You may wish to give a try to one of the other tools provided by Graphviz instead of dot (see dot.1.pdf for a list).
+  - you can change output format e.g. to pdf: ```dot -Tpdf -O tceetree.out```;
+  - you may modify layout from left to right instead of top to bottom: ```dot -Grankdir=LR -Tpng -O tceetree.out```;
+  - you may modify graph, nodes and edges font: dot -Gfontname=Helvetica -Nfontname=Helvetica -Efontname=Helvetica -Tpng -O tceetree.out;
+  - see dot.1.pdf and dotguide.pdf within Graphviz documentation for many other options.
+  - You may wish to give a try to one of the other tools provided by Graphviz instead of dot (see dot.1.pdf for a list).
 
 
 This is the synopsis of tceetree:
